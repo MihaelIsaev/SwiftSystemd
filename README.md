@@ -56,18 +56,19 @@ Description="AppName"
 After=network.target
 
 [Service]
-User=\(user)
+User={user}
 EnvironmentFile=/path/to/AppName/.env
 WorkingDirectory=/path/to/AppName
 TimeoutStopSec=2
 
 Restart=always
 
-ExecStart=/path/to/AppName/.build/release/target
+ExecStart=/path/to/AppName/.build/{config}/{target}
 
 [Install]
 WantedBy=multi-user.target
 ```
+> 💡 Please feel free to contribute your own config variations
 
 ### Uninstall
 
