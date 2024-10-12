@@ -49,6 +49,26 @@ Or you could use parameters to predefine values
 swift run systemd install -c release -t App -u mike 
 ```
 
+It generates the following config file
+```bash
+[Unit]
+Description="AppName"
+After=network.target
+
+[Service]
+User=\(user)
+EnvironmentFile=/path/to/AppName/.env
+WorkingDirectory=/path/to/AppName
+TimeoutStopSec=2
+
+Restart=always
+
+ExecStart=/path/to/AppName/.build/release/target
+
+[Install]
+WantedBy=multi-user.target
+```
+
 ### Uninstall
 
 ```
