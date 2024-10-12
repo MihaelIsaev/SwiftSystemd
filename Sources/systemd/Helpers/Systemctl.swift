@@ -46,17 +46,14 @@ struct Systemctl {
         Description="\(serviceName)"
         After=network.target
 
-        # 2
         [Service]
         User=\(user)
         EnvironmentFile=\(cwd)/.env
         WorkingDirectory=\(cwd)
         TimeoutStopSec=2
 
-        # 3
         Restart=always
 
-        # 4
         ExecStart=\(cwd)/.build/\(buildType)/\(target)
 
         [Install]
