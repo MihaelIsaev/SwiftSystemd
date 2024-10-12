@@ -30,7 +30,7 @@ The purpose of `systemd` is to run your app as a daemon and monitor it.
 
 The first step is to generate the appropriate config file and save it.
 
-### Install
+### 🛠️ Install
 
 ```
 swift run systemd install
@@ -70,70 +70,70 @@ WantedBy=multi-user.target
 ```
 > 💡 Please feel free to contribute your own config variations
 
-### Uninstall
+### 🧹 Uninstall
 
 ```
 swift run systemd uninstall
 ```
 Deletes the `systemd` configuration file and stops the service if it is active.
 
-### Start
+### 🍰 Start
 
 ```
 swift run systemd start
 ```
 Starts your app using `systemctl start`
 
-### Restart
+### 🔄 Restart
 
 ```
 swift run systemd restart
 ```
 Restarts your app using `systemctl restart`
 
-### Stop
+### 🛑 Stop
 
 ```
 swift run systemd stop
 ```
 Stops your app if it is running via `systemd`, using `systemctl stop`.
 
-### Enable
+### 🟢 Enable
 
 ```
 swift run systemd enable
 ```
 Enables the existing service configuration via `systemctl enable`.
 
-### Disable
+### 🔴 Disable
 
 ```
 swift run systemd disable
 ```
 Disables the existing service configuration via `systemctl disable`.
 
-### Kill
+### 🔫 Kill
 
 ```
 swift run systemd kill
 ```
 Sends kill signal to the running service via `systemctl kill`.
 
-### Status
+### 👀 Status
 
 ```
 swift run systemd status
 ```
 Shows status of your app via `systemctl status`.
 
-### Daemon Reload
+### ⚙️ Daemon Reload
 
 ```
 swift run systemd daemon-reload
 ```
 Reloads all `systemd` services via `systemctl daemon-reload`.
 
-### Logs
+### 📋 Logs
 
 ```
 swift run systemd logs
